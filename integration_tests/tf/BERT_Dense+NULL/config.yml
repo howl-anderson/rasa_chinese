@@ -1,0 +1,14 @@
+language: zh
+pipeline:
+- name: rasa_contrib.nlu.BertTextFeaturizer
+  ip: localhost
+  port: 5555
+  port_out: 5556
+  show_server_config: false
+  timeout: 5000
+  batch_size: 128
+- name: rasa_contrib.nlu.DenseNetworkTensorFlowClassifier
+policies:
+- name: MemoizationPolicy
+- name: KerasPolicy
+- name: MappingPolicy

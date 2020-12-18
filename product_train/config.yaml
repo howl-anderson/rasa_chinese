@@ -1,0 +1,10 @@
+language: "en"
+
+pipeline:
+  - name: "rasa_nlu_addons.utils.paddle_utils.PaddleNLP"
+  - name: "rasa_nlu_addons.extractors.bilstm_crf_paddle_entity_extractor.BilstmCrfPaddleEntityExtractor"
+    max_steps: 6000
+    epochs: 3
+  - name: "rasa_nlu_addons.classifiers.text_cnn_paddle_classifier.TextCnnPaddleClassifier"
+    max_steps: 600
+    epochs: 3

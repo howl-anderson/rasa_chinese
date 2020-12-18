@@ -1,0 +1,3 @@
+from rasa_chinese.nlu.classifiers.text_cnn_paddle_classifier import TextCnnPaddleClassifier
+from rasa_chinese.nlu.classifiers.text_cnn_tf_classifier import TextCnnTensorFlowClassifier
+from rasa_chinese.nlu.classifiers.dense_network_tf_classifier import DenseNetworkTensorFlowClassifier

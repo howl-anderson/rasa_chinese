@@ -1,0 +1,115 @@
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- REPLAY_ALL
+- ROUTE
+- DOWNLOAD
+- LAUNCH
+- DEFAULT
+- RISERATE_QUERY
+- CLOSEPRICE_QUERY
+- VIEW
+- TRANSLATION
+- DATE_QUERY
+- CREATE
+- PLAY
+- QUERY
+- FORWARD
+- OPEN
+- SENDCONTACTS
+- SEARCH
+- REPLY
+- NUMBER_QUERY
+- LOOK_BACK
+- POSITION
+- DIAL
+- SEND
+entities:
+- location_city
+- endLoc_province
+- author
+- category
+- endLoc_city
+- homeName
+- dynasty
+- Src
+- questionWord
+- payment
+- subfocus
+- location_province
+- location_country
+- awayName
+- name
+- song
+- popularity
+- endLoc_area
+- startDate_dateOrig
+- artistRole
+- decade
+- resolution
+- relIssue
+- location_poi
+- yesterday
+- datetime_date
+- type
+- artist
+- endLoc_poi
+- keyword
+- teleOperator
+- utensil
+- season
+- episode
+- film
+- dishName
+- theatre
+- scoreDescr
+- startDate_date
+- datetime_time
+- startLoc_area
+- timeDescr
+- dishNamet
+- queryField
+- area
+- date
+- target
+- tvchannel
+- startLoc_poi
+- tag
+- location_area
+- content
+- startLoc_city
+- ingredient
+- headNum
+- media
+- receiver
+- Dest
+- startDate_time
+- startLoc_province
+- absIssue
+- code
+templates:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot

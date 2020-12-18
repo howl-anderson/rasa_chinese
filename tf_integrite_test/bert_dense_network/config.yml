@@ -1,0 +1,5 @@
+language: "en"
+
+pipeline:
+  - name: "rasa_contrib.nlu.featurizers.bert_text_featurizer.BertTextFeaturizer"
+  - name: "rasa_contrib.nlu.classifiers.dense_network_tf_classifier.DenseNetworkTensorFlowClassifier"

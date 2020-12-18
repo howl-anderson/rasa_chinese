@@ -1,0 +1,33 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "in the center of NYC",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 17,
+            "end": 20,
+            "value": "New York City",
+            "entity": "city"
+          }
+        ]
+      },
+      {
+        "text": "in the centre of New York City",
+        "intent": "search",
+        "entities": [
+          {
+            "start": 17,
+            "end": 30,
+            "value": "New York City",
+            "entity": "city"
+          }
+        ]
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": []
+  }
+}

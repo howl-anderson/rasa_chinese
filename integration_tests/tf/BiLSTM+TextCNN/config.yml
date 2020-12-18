@@ -1,0 +1,11 @@
+language: en
+pipeline:
+- name: rasa_contrib.nlu.TensorflowNLP
+- name: rasa_contrib.nlu.BilstmCrfTensorFlowEntityExtractor
+  max_steps: 600
+- name: rasa_contrib.nlu.TextCnnTensorFlowClassifier
+  max_steps: 600
+policies:
+- name: MemoizationPolicy
+- name: KerasPolicy
+- name: MappingPolicy

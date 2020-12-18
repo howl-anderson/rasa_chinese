@@ -1,0 +1,13 @@
+language: "en"
+
+pipeline:
+  - name: "rasa_nlu_addons.utils.tensorflow_utils.TensorflowNLP"
+  - name: "rasa_nlu_addons.extractors.bilstm_crf_entity_extractor.BilstmCrfEntityExtractor"
+    max_steps: 600
+    train_hook:
+      - class: "rasa_nlu_addons.debugger.hooks.TensorObserveHook"
+        params:
+          key: "34FRerfFefsdKer4hdF"
+
+  - name: "rasa_nlu_addons.classifiers.text_cnn_classifier.TextCnnClassifier"
+    max_steps: 600

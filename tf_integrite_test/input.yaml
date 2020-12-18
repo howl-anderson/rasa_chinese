@@ -1,0 +1,7 @@
+title: black tests
+suite: all
+output: output.yaml
+tests:
+
+- sh: python -m rasa_nlu.train --config config.yaml  --data data.json  --path projects
+  ignore: true

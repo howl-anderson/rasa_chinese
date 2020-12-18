@@ -1,0 +1,1 @@
+from rasa_chinese.nlu.tokenizers.lm_tokenizer import LanguageModelTokenizer

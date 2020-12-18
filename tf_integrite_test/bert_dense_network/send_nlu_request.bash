@@ -1,0 +1,1 @@
+curl localhost:5005/model/parse -d '{"text":"你们是歌德学院吗"}'
