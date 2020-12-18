@@ -31,6 +31,11 @@ rasa_chinese 是专门针对中文语言的 [rasa](https://github.com/RasaHQ/ras
 * LanguageModelTokenizer
 
     基于 HuggingFace's transformers 的分词组件。
+    pipeline 使用：
+    ```yaml
+      - name: "rasa_chinese.nlu.tokenizers.lm_tokenizer.LanguageModelTokenizer"
+        tokenizer_url: "http://127.0.0.1:8000/"
+    ```
     NOTE: 需要使用 rasa_chinese_service 作为服务器，在安装 `rasa_chinese_service` 后，使用 `python -m rasa_chinese_service.nlu.tokenizers.lm_tokenizer bert-chinese-base` 启动 tokenizer 服务器
 
 
