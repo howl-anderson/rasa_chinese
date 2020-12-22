@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='rasa_chinese',
-    version='0.0.1',
+    version='2.2.0',
     packages=find_packages(),
     url='https://github.com/howl-anderson/rasa_chinese',
     license='Apache 2.0',
