@@ -69,8 +69,8 @@ python -m rasa_chinese_service.nlu.tokenizers.lm_tokenizer bert-base-chinese
 language: "zh"
 
 pipeline:
-  - name: "rasa_chinese.nlu..TensorflowNLP"
-  - name: "rasa_chinese.nlu..BilstmCrfTensorFlowEntityExtractor"
+  - name: "rasa_chinese.nlu.TensorflowNLP"
+  - name: "rasa_chinese.nlu.BilstmCrfTensorFlowEntityExtractor"
     max_steps: 600
   - name: "rasa_chinese.nlu.TextCnnTensorFlowClassifier"
     max_steps: 600
