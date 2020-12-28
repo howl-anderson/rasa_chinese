@@ -3,6 +3,9 @@
 rasa_chinese 是专门针对中文语言的 [rasa](https://github.com/RasaHQ/rasa) 组件扩展包。提供了许多针对中文语言的组件。
 
 ## 安装
+```bash
+pip install rasa_chinese
+```
 
 ## 当前包含的组件
 ### LanguageModelTokenizer
