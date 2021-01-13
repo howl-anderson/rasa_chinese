@@ -1,1 +1,2 @@
 from rasa_chinese.nlu.tokenizers.lm_tokenizer import LanguageModelTokenizer
+from rasa_chinese.nlu.tokenizers.micro_tokenizer import MicroTokenizer

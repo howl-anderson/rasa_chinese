@@ -1,40 +1,28 @@
-import logging
-import typing
 import copy
+import logging
 from typing import Any, Dict, List, Text
 
-from rasa.nlu.components import Component
-from rasa.nlu.config import RasaNLUModelConfig
 from rasa.nlu.tokenizers.tokenizer import Token, Tokenizer
-from rasa.nlu.training_data import Message, TrainingData
+from rasa.shared.nlu.training_data.message import Message
 
 logger = logging.getLogger(__name__)
 
 
-if typing.TYPE_CHECKING:
-    pass
-
-
-class MicroAddonsTokenizer(Tokenizer):
+class MicroTokenizer(Tokenizer):
     provides = ["tokens"]
 
     language_list = ["zh"]
 
     defaults = {
-        "custom_dict": None,
-        # Flag to check whether to split intents
-        "intent_tokenization_flag": False,
-        # Symbol on which intent should be split
-        "intent_split_symbol": "_",
-    }  # default don't load custom dictionary
+        "dictionary_path": None,  # default don't load custom dictionary
+    }
 
     def __init__(self, component_config: Dict[Text, Any] = None) -> None:
         super().__init__(component_config)
 
-        kwargs = copy.deepcopy(component_config)
-        kwargs.pop("name")
+        kwargs = copy.deepcopy(component_config) if component_config else dict()
 
-        self.custom_dict = kwargs.pop("custom_dict", None)
+        self.custom_dict = kwargs.pop("dictionary_path", None)
 
         if self.custom_dict:
             self.load_custom_dictionary(self.custom_dict)
