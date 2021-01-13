@@ -23,6 +23,14 @@ python -m rasa_chinese_service.nlu.tokenizers.lm_tokenizer bert-base-chinese
 ```
 启动 tokenizer 服务器
 
+### MicroTokenizer
+
+基于 MicroTokenizer (https://github.com/howl-anderson/MicroTokenizer) 的分词组件
+
+pipeline 使用：
+```yaml
+  - name: "rasa_chinese.nlu.tokenizers.MicroTokenizer"
+```
 
 ## 正在开发中
 
