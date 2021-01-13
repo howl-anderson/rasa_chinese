@@ -51,7 +51,7 @@ def test_tokenizer_for_chinese(text, expected_tokens, expected_indices):
     ],
 )
 def test_custom_intent_symbol(text, expected_tokens):
-    component_config = {"intent_tokenization_flag": True, "intent_split_symbol": "+"}
+    component_config = {"tokenizer_url": "http://127.0.0.1:8000/", "intent_tokenization_flag": True, "intent_split_symbol": "+"}
 
     tk = LanguageModelTokenizer(component_config)
 
