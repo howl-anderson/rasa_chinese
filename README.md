@@ -32,6 +32,10 @@ pipeline 使用：
   - name: "rasa_chinese.nlu.tokenizers.MicroTokenizer"
 ```
 
+### 微信 connector
+当前(未来可能会改变),我们可以直接使用 rasa 自带的 rest channel connector 来完成和 Rasa adapter 的连接. 因此只需确保 rast channel (位于`credentials.yml`文件中) 是开启的.
+当前微信 connector 配置的核心位于 [rasa_chinese_service](https://github.com/howl-anderson/rasa_chinese_service) 仓库, 用户可以仔细阅读相关文档,按照文档逐步设置. 
+
 ## 正在开发中
 
 更多组件正在从 1.x 版本移植到 2.x 版本。
