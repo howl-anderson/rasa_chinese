@@ -36,6 +36,26 @@ pipeline 使用：
 当前(未来可能会改变),我们可以直接使用 rasa 自带的 rest channel connector 来完成和 Rasa adapter 的连接. 因此只需确保 rast channel (位于`credentials.yml`文件中) 是开启的.
 当前微信 connector 配置的核心位于 [rasa_chinese_service](https://github.com/howl-anderson/rasa_chinese_service) 仓库, 用户可以仔细阅读相关文档,按照文档逐步设置. 
 
+### 离线模型
+基于 transformers 的组件需要下载模型。这一过程需要访问 AWS 服务器，对于国内的用户来说可能速度慢或者网络不稳定。这里提供了工具可以直接下载模型做成离线模型。离线模型可以直接在组件中使用。
+#### 离线模型下载
+```
+python -m rasa_chinese.tools.download_transformers_model bert-base-cased offline_model
+```
+其中 `bert-base-cased` 是你要下载的模型名字， `offline_model` 是你离线模型存储的目录，目录必须已经存在。
+#### 离线模型使用
+在你的 config.yml 文件中，这样使用离线模型
+```
+pipeline:
+  - name: JiebaTokenizer
+  - name: LanguageModelFeaturizer
+    model_name: bert
+    model_weights: /path/to/offline_model
+  - name: "DIETClassifier"
+    epochs: 100
+```
+其中的 `/path/to/offline_model` 指向你的模型目录
+
 ## 正在开发中
 
 更多组件正在从 1.x 版本移植到 2.x 版本。

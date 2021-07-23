@@ -200,3 +200,4 @@ pip-selfcheck.json
 
 bert_model_dir/
 .idea
+.direnv
