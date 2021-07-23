@@ -43,6 +43,8 @@ pipeline 使用：
 python -m rasa_chinese.tools.download_transformers_model bert-base-cased offline_model
 ```
 其中 `bert-base-cased` 是你要下载的模型名字， `offline_model` 是你离线模型存储的目录，目录必须已经存在。
+
+注意：你需要在网络通畅（指能顺利访问AWS服务）的主机上运行该命令，否则可能会出现网络错误。
 #### 离线模型使用
 在你的 config.yml 文件中，这样使用离线模型
 ```
