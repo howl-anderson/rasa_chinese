@@ -2,7 +2,7 @@
 
 rasa_chinese 是专门针对中文语言的 [rasa](https://github.com/RasaHQ/rasa) 组件扩展包。提供了许多针对中文语言的组件。
 
-**本组件是得到了 Rasa 官方的认可，官方博客中推荐中文Rasa用户尝试使用本软件包： https://rasa.com/blog/non-english-tools-for-rasa/**
+**本软件包得到了 Rasa 官方的认可，官方博客中推荐中文 Rasa 用户使用： https://rasa.com/blog/non-english-tools-for-rasa/**
 
 ## 安装
 ```bash
