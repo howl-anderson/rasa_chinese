@@ -5,7 +5,7 @@ def main(model_name="bert-base-cased", output_dir="offline_model"):
     try:
         from transformers import TFBertModel, BertTokenizer
     except ImportError:
-        print("使用本工具，必须要先安装 transfomers 库，你可以通过 pip install rasa[transformer] 安装")
+        print("使用本工具，必须要先安装 transfomers 库，你可以通过 pip install rasa[transformers] 安装")
         sys.exit(-1)
 
     model = TFBertModel.from_pretrained(model_name)
