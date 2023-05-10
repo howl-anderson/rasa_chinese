@@ -9,5 +9,5 @@ setup(
     author='Xiaoquan Kong',
     author_email='u1mail2me@gmail.com',
     description='A Chinese language extension package for Rasa',
-    install_requires=["rasa~=2.8"]
+    install_requires=["rasa~=3"]
 )
