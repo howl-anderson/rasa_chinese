@@ -1,0 +1,2 @@
+model_checkpoint_path: "ted_policy.tf_model"
+all_model_checkpoint_paths: "ted_policy.tf_model"
